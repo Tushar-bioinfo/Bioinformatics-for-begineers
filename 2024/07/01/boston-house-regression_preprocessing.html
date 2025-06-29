@@ -120,21 +120,7 @@ The file format is unusual — every data sample spans <strong>two rows</strong>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span><span class="p">.</span><span class="nf">tail</span><span class="p">()</span>
 </code></pre></div></div>
-
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
+<p>&lt;/div&gt;</p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -243,7 +229,7 @@ The file format is unusual — every data sample spans <strong>two rows</strong>
     </tr>
   </tbody>
 </table>
-</div>
+<p>&lt;/div&gt;</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span><span class="p">.</span><span class="nf">count</span><span class="p">()</span>    <span class="c1">### num of rows for each col 
 </span></code></pre></div></div>
@@ -359,6 +345,7 @@ memory usage: 55.5 KB
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span><span class="p">.</span><span class="nf">describe</span><span class="p">()</span>
 </code></pre></div></div>
+<p>&lt;/div&gt;</p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -667,7 +654,8 @@ Corr with LSTAT:   -0.7376627261740151
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span><span class="p">.</span><span class="nf">corr</span><span class="p">()</span>
 </code></pre></div></div>
-<p>&lt;/style&gt;</p>
+<p>&lt;/div&gt;
+&lt;/style&gt;</p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1193,6 +1181,7 @@ regr.fit(x_train,y_train)
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">trained_coef</span>
 
 </code></pre></div></div>
+<p>&lt;/div&gt;</p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1388,6 +1377,7 @@ R2 for trained data: 0.750121534530608
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pd</span><span class="p">.</span><span class="nc">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">Coeff</span><span class="sh">"</span><span class="p">],</span> <span class="n">data</span><span class="o">=</span><span class="n">log_reg</span><span class="p">.</span><span class="n">coef_</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">features</span><span class="p">.</span><span class="n">columns</span><span class="p">)</span>
 </code></pre></div></div>
+<p>&lt;/div&gt;</p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1477,21 +1467,7 @@ R2 value of Test set : 0.7446922306260739
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pd</span><span class="p">.</span><span class="nc">DataFrame</span><span class="p">({</span><span class="sh">"</span><span class="s">Coef</span><span class="sh">"</span><span class="p">:</span><span class="n">results</span><span class="p">.</span><span class="n">params</span><span class="p">,</span> <span class="sh">"</span><span class="s">Pvalues</span><span class="sh">"</span><span class="p">:</span><span class="nf">round</span><span class="p">(</span><span class="n">results</span><span class="p">.</span><span class="n">pvalues</span><span class="p">,</span><span class="mi">3</span><span class="p">)})</span>
 </code></pre></div></div>
-
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
+<p>&lt;/div&gt;</p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1573,7 +1549,7 @@ R2 value of Test set : 0.7446922306260739
     </tr>
   </tbody>
 </table>
-</div>
+<p>&lt;/div&gt;</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">results</span><span class="p">.</span><span class="n">rsquared</span>
 </code></pre></div></div>
@@ -1667,21 +1643,7 @@ where ( R^2_i ) is the R² value from regressing the <em>i-th</em> feature on al
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pd</span><span class="p">.</span><span class="nc">DataFrame</span><span class="p">({</span><span class="sh">"</span><span class="s">coef_name</span><span class="sh">"</span><span class="p">:</span> <span class="n">features</span><span class="p">.</span><span class="n">columns</span><span class="p">,</span><span class="sh">"</span><span class="s">VIF</span><span class="sh">"</span><span class="p">:</span><span class="n">vif_list</span><span class="p">}</span> <span class="p">)</span>
 </code></pre></div></div>
-
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
+<p>&lt;/div&gt;</p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1758,7 +1720,7 @@ where ( R^2_i ) is the R² value from regressing the <em>i-th</em> feature on al
     </tr>
   </tbody>
 </table>
-</div>
+<p>&lt;/div&gt;</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 </code></pre></div></div>
@@ -1984,6 +1946,7 @@ Rsquared : 0.792
 
 <span class="n">pd</span><span class="p">.</span><span class="nf">concat</span><span class="p">(</span><span class="n">models_list</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 </code></pre></div></div>
+<p>&lt;/div&gt;</p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
