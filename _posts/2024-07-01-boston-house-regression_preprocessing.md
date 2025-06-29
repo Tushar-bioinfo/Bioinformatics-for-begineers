@@ -10,7 +10,10 @@ The Boston Housing dataset is one of the classic beginner projects in machine le
 
 This isn't meant to be a full tutorial — instead, I’ll walk through the main parts of the process that stood out to me: how we test relationships between features, apply log transformations, evaluate model fit using BIC, and use RMSE to build a prediction range.
 
+Along the way, I’ll also be trying out a few different ways to visualize the results — mostly just to explore more plotting options and get better at using them. These variations aren’t necessary to follow, but they all use the same core functions and are good for practice.
+
 The idea is to keep things simple and practical. If you’re also exploring ML and want to build intuition for how regression works in real datasets, I hope this post helps you spot the “why” behind some of the steps — not just the code itself.
+
 
 ## Import Libraries
 
