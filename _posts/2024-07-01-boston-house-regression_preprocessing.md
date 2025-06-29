@@ -112,21 +112,7 @@ print(data)
 ```python
 data.tail()
 ```
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
+</div>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -380,6 +366,7 @@ sb.displot(data.PRICE,bins=30,kde=True)
 ```python
 data.describe()
 ```
+</div>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -735,6 +722,7 @@ for cols in data.columns:
 ```python
 data.corr()
 ```
+</div>
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -1315,6 +1303,7 @@ trained_coef = pd.DataFrame(data = regr.coef_, index= x_train.columns , columns=
 trained_coef
 
 ```
+</div>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1508,6 +1497,7 @@ log_reg.fit(x_train,y_train)
 ```python
 pd.DataFrame(columns=["Coeff"], data=log_reg.coef_, index=features.columns)
 ```
+</div>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1607,24 +1597,7 @@ results = model.fit()
 ```python
 pd.DataFrame({"Coef":results.params, "Pvalues":round(results.pvalues,3)})
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
+</div>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1827,24 +1800,7 @@ vif_list
 ```python
 pd.DataFrame({"coef_name": features.columns,"VIF":vif_list} )
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
+</div>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2137,6 +2093,7 @@ models_list = [model_1,model_2,model_3]
 
 pd.concat(models_list, axis = 1)
 ```
+</div>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
