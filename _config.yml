@@ -10,7 +10,13 @@ minima:
   show_excerpts: true
   date_format: "%b %-d, %Y"
 
-layout: default
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      include: mathjax
+
 
 author: Tushar Singh
 email: tushar14032001@gmail.com
