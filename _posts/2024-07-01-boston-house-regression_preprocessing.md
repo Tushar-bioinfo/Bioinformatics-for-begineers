@@ -1238,51 +1238,41 @@ features = data.drop("PRICE", axis = 1)     #### to remove a col off
 ```
 
 
-```python
-arr = np.array([[1, 2], [3, 4]])
-arr
-
-
-```
-
-
-
-
-    array([[1, 2],
-           [3, 4]])
-
-
-
 ## Multivariable Linear Regression Overview
 
-> In multivariable linear regression, we model the target (`PRICE`) as a **weighted sum of all features**, plus an intercept.
+> In multivariable linear regression, we try to predict the target variable (`PRICE`) as a weighted sum of all input features, plus an intercept.
 
-The general form of the equation is:
+The general form of the equation looks like this:
 
 $$
 \hat{\text{Price}} = \theta_0 + \theta_1 \cdot \text{RM} + \theta_2 \cdot \text{NOX} + \cdots + \theta_n \cdot N
 $$
 
 Where:
-- $\theta_0$ is the **intercept** (baseline price when all features are zero)
-- $\theta_1$, $\theta_2$, ..., $\theta_n$ are the **coefficients** (influence of each feature)
-- `RM`, `NOX`, ..., `N` are the actual feature values
 
-> The **intercept stays constant** within a model, but the $\theta$ values change depending on which features we include or exclude.
+- $\theta_0$ is the **intercept** — the baseline prediction when all features are zero  
+- $\theta_1, \theta_2, \dots, \theta_n$ are the **coefficients** for each feature  
+- `RM`, `NOX`, ..., `N` are the actual feature values from the dataset
 
-This formula is what we estimate when we use `LinearRegression.fit()` or statsmodels' OLS.
+> These $\theta$ values (coefficients) are what the model "learns" during training. The intercept stays fixed for a given model, but the individual feature weights change depending on which features we include or exclude.
 
-##  Split the Data into Training and Test Sets
+This is the underlying formula estimated when we use `LinearRegression().fit()` or `statsmodels.OLS()`.
 
-> We split the dataset into:
-> - `x_train`, `y_train`: used to train the model (80%)
-> - `x_test`, `y_test`: used to evaluate the model’s generalization (20%)
+---
 
-We use `train_test_split()` with:
-- `test_size=0.2` to allocate 20% of the data for testing
-- `random_state=10` to ensure reproducibility of the split
+## 🧪 Splitting the Data: Train vs Test Sets
 
-> Splitting the data ensures that our model isn’t evaluated on the same data it was trained on — this helps us detect overfitting.
+> To evaluate model performance fairly, we split our dataset into:
+> - `x_train`, `y_train`: used to train the model (80% of data)
+> - `x_test`, `y_test`: used to test generalization (20% of data)
+
+We use `train_test_split()` from `sklearn.model_selection`, with:
+
+- `test_size=0.2` → 20% of the data goes to the test set  
+- `random_state=10` → makes the split reproducible
+
+> This step helps us check whether our model performs well on unseen data and isn’t just memorizing patterns from training.
+
 ```python
 x_train,x_test,y_train,y_test = tts(features,prices,test_size=0.2,random_state=10)
 
