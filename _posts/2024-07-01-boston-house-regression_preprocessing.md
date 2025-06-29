@@ -1,4 +1,16 @@
-## Import Libraries
+---
+title: "Hands-On with Linear Regression: Boston Housing Edition"
+layout: post
+date: 2024-07-01
+---
+
+> **Note:** This project was part of my learning journey, not a tutorial.
+
+The Boston Housing dataset is one of the classic beginner projects in machine learning. I worked on this as part of my learning journey and wanted to share a few key steps that I personally found interesting or worth paying attention to.
+
+This isn't meant to be a full tutorial — instead, I’ll walk through the main parts of the process that stood out to me: how we test relationships between features, apply log transformations, evaluate model fit using BIC, and use RMSE to build a prediction range.
+
+The idea is to keep things simple and practical. If you’re also exploring ML and want to build intuition for how regression works in real datasets, I hope this post helps you spot the “why” behind some of the steps — not just the code itself.## Import Libraries
 
 > We begin by importing essential libraries for:
 > - data handling (`pandas`, `numpy`)
