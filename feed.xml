@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-06-29T19:05:28+00:00</updated><id>/feed.xml</id><title type="html">Bioinformatics for Beginners</title><subtitle>A blog by Tushar to simplify bioinformatics and machine learning</subtitle><author><name>Tushar Singh</name></author><entry><title type="html">Boston Housing</title><link href="/2024/01/01/boston-housing.html" rel="alternate" type="text/html" title="Boston Housing" /><published>2024-01-01T00:00:00+00:00</published><updated>2024-01-01T00:00:00+00:00</updated><id>/2024/01/01/boston-housing</id><content type="html" xml:base="/2024/01/01/boston-housing.html"><![CDATA[<hr />
+<p>title: “Predicting Boston Housing Prices with Linear Regression”
+layout: post
+—</p>
+
+<!-- You can paste your blog post content below this line -->]]></content><author><name>Tushar Singh</name></author><summary type="html"><![CDATA[title: “Predicting Boston Housing Prices with Linear Regression” layout: post —]]></summary></entry></feed>
