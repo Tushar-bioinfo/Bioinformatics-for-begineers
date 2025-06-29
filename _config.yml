@@ -1,3 +1,8 @@
 title: Bioinformatics for Beginners
 description: A blog by Tushar to simplify bioinformatics and machine learning
-theme: Minimal Mistakes 
+theme: minima
+
+# Enable minima features
+minima:
+  skin: dark
+  social_links: []
