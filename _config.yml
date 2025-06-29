@@ -1,14 +1,32 @@
-title: Bioinformatics for Beginners
-description: A blog by Tushar to simplify bioinformatics and machine learning
-theme: minima
+name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 
-# Enable minima features
-minima:
-  skin: dark
-  social_links:
-    - { platform: github, user_url: "https://github.com/tushar-bioinfo" }
-  show_excerpts: true
-  date_format: "%b %-d, %Y"
+on:
+  push:
+    branches:
+      - main  # Or 'master' if your default branch is that
 
-author: Tushar Singh
-email: tushar14032001@gmail.com
+jobs:
+  github-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle config set --local path 'vendor/bundle'
+          bundle install
+
+      - name: Build the site with Jekyll
+        run: bundle exec jekyll build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
