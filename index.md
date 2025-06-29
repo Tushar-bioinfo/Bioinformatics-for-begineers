@@ -9,7 +9,8 @@ Hi, I'm Tushar! I simplify bioinformatics and ML through tutorials and walkthrou
 
 
 ### 📘 Blog Posts:
-- [Predicting Boston Housing Prices](/Bioinformatics-for-begineers/2024/07/01/boston-house-regression_preprocessing.html)
+- [Predicting Boston Housing Prices](/Bioinformatics-for-beginners/2024/07/01/boston-house-regression_preprocessing.html)
+
 
 
 babua
