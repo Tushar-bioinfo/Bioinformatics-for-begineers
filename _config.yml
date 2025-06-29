@@ -10,12 +10,6 @@ minima:
   show_excerpts: true
   date_format: "%b %-d, %Y"
 
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      include: mathjax
 
 
 author: Tushar Singh
