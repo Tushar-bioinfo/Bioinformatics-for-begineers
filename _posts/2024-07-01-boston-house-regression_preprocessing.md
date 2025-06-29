@@ -1251,10 +1251,11 @@ $$
 Where:
 
 - $\theta_0$ is the **intercept** — the baseline prediction when all features are zero  
-- $\theta_1, \theta_2, \dots, \theta_n$ are the **coefficients** for each feature  
-- `RM`, `NOX`, ..., `N` are the actual feature values from the dataset
+- $\theta_1, \theta_2, \dots, \theta_n$ are the **coefficients** learned by the model  
+- `RM`, `NOX`, ..., `N` are the actual feature values from the dataset  
+- The coefficient $\theta_1$ controls the weight of the `RM` feature
 
-> These $\theta$ values (coefficients) are what the model "learns" during training. The intercept stays fixed for a given model, but the individual feature weights change depending on which features we include or exclude.
+> These $\theta$ values (coefficients) are what the model "learns" during training. The intercept stays fixed for a given model, but the individual feature weights can change depending on which features we include or exclude.
 
 This is the underlying formula estimated when we use `LinearRegression().fit()` or `statsmodels.OLS()`.
 
