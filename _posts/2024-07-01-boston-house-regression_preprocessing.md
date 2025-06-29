@@ -1238,7 +1238,7 @@ features = data.drop("PRICE", axis = 1)     #### to remove a col off
 ```
 
 
-## 📈 Multivariable Linear Regression Overview
+## Multivariable Linear Regression Overview
 
 > In multivariable linear regression, we try to predict the target variable (`PRICE`) as a weighted sum of all input features, plus an intercept.
 
@@ -1260,7 +1260,7 @@ This is the underlying formula estimated when we use `LinearRegression().fit()` 
 
 ---
 
-## 🧪 Splitting the Data: Train vs Test Sets
+## Splitting the Data: Train vs Test Sets
 
 > To evaluate model performance fairly, we split our dataset into:
 > - `x_train`, `y_train`: used to train the model (80% of data)
@@ -1704,21 +1704,27 @@ results.rsquared
 
 ## Testing for Multicollinearity with VIF
 
-> Multicollinearity occurs when features are highly correlated with each other, which can make the regression model unstable or misleading.
+> Multicollinearity happens when two or more input features are strongly correlated with each other. This can make the model’s coefficient estimates unreliable or overly sensitive to small changes in the data.
 
-We test for this using **VIF (Variance Inflation Factor)**:
-- VIF measures how much a feature is "inflated" due to correlation with other features.
-- Formula:  
-  $$ \text{VIF}_i = \frac{1}{1 - R^2_i} $$  
-  where \( R^2_i \) is the R² value from regressing the *i-th* feature on all others.
-  
-> **Interpretation:**
-> - VIF = 1 → no multicollinearity
-> - VIF = 1–5 → okay
-> - VIF = 5–10 → moderate, keep an eye
-> - VIF > 10 → **serious multicollinearity**, consider dropping that feature
+We test for this using **VIF** (Variance Inflation Factor), which measures how much the variance of a regression coefficient is inflated due to multicollinearity.
 
-By calculating VIF for all features, we can identify which ones are redundant and safely remove them to improve model reliability and interpretability.
+The formula for VIF is:
+
+$$
+\text{VIF}_i = \frac{1}{1 - R^2_i}
+$$
+
+Where:
+- $R^2_i$ is the coefficient of determination when the *i-th* feature is regressed against all the other features.
+
+### 🔍 How to interpret VIF:
+- **VIF ≈ 1** → No multicollinearity  
+- **VIF = 1–5** → Generally acceptable  
+- **VIF = 5–10** → Moderate correlation, may need checking  
+- **VIF > 10** → Strong multicollinearity — consider removing the feature
+
+> By calculating VIF scores for all features, we can identify which ones may be redundant and remove them to improve both the stability and interpretability of the model.
+
 
 ```python
 # VIF = vif(exog = x_incl_const.values ,exog_idx=13 )
