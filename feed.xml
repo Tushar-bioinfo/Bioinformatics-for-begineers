@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-06-29T23:13:29+00:00</updated><id>/feed.xml</id><title type="html">Bioinformatics for Beginners</title><subtitle>A blog by Tushar to simplify bioinformatics and machine learning</subtitle><author><name>Tushar Singh</name></author><entry><title type="html">Hands-On with Linear Regression: Boston Housing Edition</title><link href="/2024/07/01/boston-house-regression_preprocessing.html" rel="alternate" type="text/html" title="Hands-On with Linear Regression: Boston Housing Edition" /><published>2024-07-01T00:00:00+00:00</published><updated>2024-07-01T00:00:00+00:00</updated><id>/2024/07/01/boston-house-regression_preprocessing</id><content type="html" xml:base="/2024/07/01/boston-house-regression_preprocessing.html"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-06-29T23:16:06+00:00</updated><id>/feed.xml</id><title type="html">Bioinformatics for Beginners</title><subtitle>A blog by Tushar to simplify bioinformatics and machine learning</subtitle><author><name>Tushar Singh</name></author><entry><title type="html">Hands-On with Linear Regression: Boston Housing Edition</title><link href="/2024/07/01/boston-house-regression_preprocessing.html" rel="alternate" type="text/html" title="Hands-On with Linear Regression: Boston Housing Edition" /><published>2024-07-01T00:00:00+00:00</published><updated>2024-07-01T00:00:00+00:00</updated><id>/2024/07/01/boston-house-regression_preprocessing</id><content type="html" xml:base="/2024/07/01/boston-house-regression_preprocessing.html"><![CDATA[<blockquote>
   <p><strong>Note:</strong> This project was part of my learning journey, not a tutorial.</p>
 </blockquote>
 
@@ -1108,77 +1108,77 @@ Since correlation matrices are symmetrical, we mask one triangle to <strong>avoi
 </span>
 </code></pre></div></div>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
-<span class="n">arr</span>
-
-
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>array([[1, 2],
-       [3, 4]])
-</code></pre></div></div>
-
 <h2 id="multivariable-linear-regression-overview">Multivariable Linear Regression Overview</h2>
 
 <blockquote>
-  <p>In multivariable linear regression, we model the target (<code class="language-plaintext highlighter-rouge">PRICE</code>) as a <strong>weighted sum of all features</strong>, plus an intercept.</p>
+  <p>In multivariable linear regression, we try to predict the target variable (<code class="language-plaintext highlighter-rouge">PRICE</code>) as a weighted sum of all input features, plus an intercept.</p>
 </blockquote>
 
-<p>The general form of the equation is:</p>
+<p>The general form of the equation looks like this:</p>
 
 \[\hat{\text{Price}} = \theta_0 + \theta_1 \cdot \text{RM} + \theta_2 \cdot \text{NOX} + \cdots + \theta_n \cdot N\]
 
 <p>Where:</p>
+
 <ul>
-  <li>$\theta_0$ is the <strong>intercept</strong> (baseline price when all features are zero)</li>
-  <li>$\theta_1$, $\theta_2$, …, $\theta_n$ are the <strong>coefficients</strong> (influence of each feature)</li>
-  <li><code class="language-plaintext highlighter-rouge">RM</code>, <code class="language-plaintext highlighter-rouge">NOX</code>, …, <code class="language-plaintext highlighter-rouge">N</code> are the actual feature values</li>
+  <li>$\theta_0$ is the <strong>intercept</strong> — the baseline prediction when all features are zero</li>
+  <li>$\theta_1, \theta_2, \dots, \theta_n$ are the <strong>coefficients</strong> for each feature</li>
+  <li><code class="language-plaintext highlighter-rouge">RM</code>, <code class="language-plaintext highlighter-rouge">NOX</code>, …, <code class="language-plaintext highlighter-rouge">N</code> are the actual feature values from the dataset</li>
 </ul>
 
 <blockquote>
-  <p>The <strong>intercept stays constant</strong> within a model, but the $\theta$ values change depending on which features we include or exclude.</p>
+  <p>These $\theta$ values (coefficients) are what the model “learns” during training. The intercept stays fixed for a given model, but the individual feature weights change depending on which features we include or exclude.</p>
 </blockquote>
 
-<p>This formula is what we estimate when we use <code class="language-plaintext highlighter-rouge">LinearRegression.fit()</code> or statsmodels’ OLS.</p>
+<p>This is the underlying formula estimated when we use <code class="language-plaintext highlighter-rouge">LinearRegression().fit()</code> or <code class="language-plaintext highlighter-rouge">statsmodels.OLS()</code>.</p>
 
-<h2 id="split-the-data-into-training-and-test-sets">Split the Data into Training and Test Sets</h2>
+<hr />
+
+<h2 id="-splitting-the-data-train-vs-test-sets">🧪 Splitting the Data: Train vs Test Sets</h2>
 
 <blockquote>
-  <p>We split the dataset into:</p>
+  <p>To evaluate model performance fairly, we split our dataset into:</p>
   <ul>
-    <li><code class="language-plaintext highlighter-rouge">x_train</code>, <code class="language-plaintext highlighter-rouge">y_train</code>: used to train the model (80%)</li>
-    <li><code class="language-plaintext highlighter-rouge">x_test</code>, <code class="language-plaintext highlighter-rouge">y_test</code>: used to evaluate the model’s generalization (20%)</li>
+    <li><code class="language-plaintext highlighter-rouge">x_train</code>, <code class="language-plaintext highlighter-rouge">y_train</code>: used to train the model (80% of data)</li>
+    <li><code class="language-plaintext highlighter-rouge">x_test</code>, <code class="language-plaintext highlighter-rouge">y_test</code>: used to test generalization (20% of data)</li>
   </ul>
 </blockquote>
 
-<p>We use <code class="language-plaintext highlighter-rouge">train_test_split()</code> with:</p>
+<p>We use <code class="language-plaintext highlighter-rouge">train_test_split()</code> from <code class="language-plaintext highlighter-rouge">sklearn.model_selection</code>, with:</p>
+
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">test_size=0.2</code> to allocate 20% of the data for testing</li>
-  <li><code class="language-plaintext highlighter-rouge">random_state=10</code> to ensure reproducibility of the split</li>
+  <li><code class="language-plaintext highlighter-rouge">test_size=0.2</code> → 20% of the data goes to the test set</li>
+  <li><code class="language-plaintext highlighter-rouge">random_state=10</code> → makes the split reproducible</li>
 </ul>
 
 <blockquote>
-  <p>Splitting the data ensures that our model isn’t evaluated on the same data it was trained on — this helps us detect overfitting.
-```python
-x_train,x_test,y_train,y_test = tts(features,prices,test_size=0.2,random_state=10)</p>
+  <p>This step helps us check whether our model performs well on unseen data and isn’t just memorizing patterns from training.</p>
 </blockquote>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## Fit a Linear Regression Model
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x_train</span><span class="p">,</span><span class="n">x_test</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">y_test</span> <span class="o">=</span> <span class="nf">tts</span><span class="p">(</span><span class="n">features</span><span class="p">,</span><span class="n">prices</span><span class="p">,</span><span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
-&gt; We create a `LinearRegression` object and fit it to the **training data** using `.fit(x_train, y_train)`.
+</code></pre></div></div>
+<h2 id="fit-a-linear-regression-model">Fit a Linear Regression Model</h2>
 
-This step estimates:
-- the **intercept** (baseline value)
-- the **coefficients** (weights for each feature)
+<blockquote>
+  <p>We create a <code class="language-plaintext highlighter-rouge">LinearRegression</code> object and fit it to the <strong>training data</strong> using <code class="language-plaintext highlighter-rouge">.fit(x_train, y_train)</code>.</p>
+</blockquote>
 
-These learned parameters define the multivariable regression equation used to predict house prices.
+<p>This step estimates:</p>
+<ul>
+  <li>the <strong>intercept</strong> (baseline value)</li>
+  <li>the <strong>coefficients</strong> (weights for each feature)</li>
+</ul>
 
-&gt; The second `regr_test = LR()` is likely for a later use on the test set (e.g., predicting and evaluating).
+<p>These learned parameters define the multivariable regression equation used to predict house prices.</p>
 
-```python
-regr = LR()
-regr_test = LR()
-regr.fit(x_train,y_train)
+<blockquote>
+  <p>The second <code class="language-plaintext highlighter-rouge">regr_test = LR()</code> is likely for a later use on the test set (e.g., predicting and evaluating).</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">regr</span> <span class="o">=</span> <span class="nc">LR</span><span class="p">()</span>
+<span class="n">regr_test</span> <span class="o">=</span> <span class="nc">LR</span><span class="p">()</span>
+<span class="n">regr</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
 
 </code></pre></div></div>
 
