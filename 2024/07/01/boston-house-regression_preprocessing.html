@@ -1146,7 +1146,7 @@ Since correlation matrices are symmetrical, we mask one triangle to <strong>avoi
 </span>
 </code></pre></div></div>
 
-<h2 id="multivariable-linear-regression-overview">Multivariable Linear Regression Overview</h2>
+<h2 id="-multivariable-linear-regression-overview">📈 Multivariable Linear Regression Overview</h2>
 
 <blockquote>
   <p>In multivariable linear regression, we try to predict the target variable (<code class="language-plaintext highlighter-rouge">PRICE</code>) as a weighted sum of all input features, plus an intercept.</p>
@@ -1157,11 +1157,10 @@ Since correlation matrices are symmetrical, we mask one triangle to <strong>avoi
 \[\hat{\text{Price}} = \theta_0 + \theta_1 \cdot \text{RM} + \theta_2 \cdot \text{NOX} + \cdots + \theta_n \cdot N\]
 
 <p>Where:</p>
-
 <ul>
   <li>$\theta_0$ is the <strong>intercept</strong> — the baseline prediction when all features are zero</li>
   <li>$\theta_1, \theta_2, \dots, \theta_n$ are the <strong>coefficients</strong> learned by the model</li>
-  <li><code class="language-plaintext highlighter-rouge">RM</code>, <code class="language-plaintext highlighter-rouge">NOX</code>, …, <code class="language-plaintext highlighter-rouge">N</code> are the actual feature values from the dataset</li>
+  <li><code class="language-plaintext highlighter-rouge">RM</code>, <code class="language-plaintext highlighter-rouge">NOX</code>, …, <code class="language-plaintext highlighter-rouge">N</code> are the actual input features from the dataset</li>
   <li>The coefficient $\theta_1$ controls the weight of the <code class="language-plaintext highlighter-rouge">RM</code> feature</li>
 </ul>
 
