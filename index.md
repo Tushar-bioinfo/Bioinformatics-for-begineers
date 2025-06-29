@@ -8,5 +8,7 @@ layout: default
 Hi, I'm Tushar! I simplify bioinformatics and ML through tutorials and walkthroughs.
 
 ### 📘 Blog Posts:
-- [Predicting Boston Housing Prices]([./2024-07-01-boston-house-regression_preprocessing.md)
+
+- [Predicting Boston Housing Prices](./_posts/2024-07-01-boston-house-regression_preprocessing.md)
+
 
