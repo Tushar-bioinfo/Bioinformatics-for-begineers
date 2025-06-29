@@ -356,7 +356,7 @@ plt.ylabel("Num of houses",fontsize = 12)
 
 
     
-![png](/main_files/main_13_1.png)
+![png](/Bioinformatics-for-beginners/main_files/main_13_1.png)
     
 
 
