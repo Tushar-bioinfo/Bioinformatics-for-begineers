@@ -13,7 +13,6 @@ Hi, I'm Tushar! I simplify bioinformatics and ML through tutorials and walkthrou
 
 
 
-babua
-pta na
+
 
 
