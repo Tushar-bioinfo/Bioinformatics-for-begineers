@@ -10,9 +10,7 @@ minima:
   show_excerpts: true
   date_format: "%b %-d, %Y"
 
-markdown: kramdown
-kramdown:
-  math_engine: mathjax
+layout: default
 
 author: Tushar Singh
 email: tushar14032001@gmail.com
