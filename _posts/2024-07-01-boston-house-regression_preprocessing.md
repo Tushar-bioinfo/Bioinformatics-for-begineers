@@ -10,7 +10,9 @@ The Boston Housing dataset is one of the classic beginner projects in machine le
 
 This isn't meant to be a full tutorial — instead, I’ll walk through the main parts of the process that stood out to me: how we test relationships between features, apply log transformations, evaluate model fit using BIC, and use RMSE to build a prediction range.
 
-The idea is to keep things simple and practical. If you’re also exploring ML and want to build intuition for how regression works in real datasets, I hope this post helps you spot the “why” behind some of the steps — not just the code itself.## Import Libraries
+The idea is to keep things simple and practical. If you’re also exploring ML and want to build intuition for how regression works in real datasets, I hope this post helps you spot the “why” behind some of the steps — not just the code itself.
+
+## Import Libraries
 
 > We begin by importing essential libraries for:
 > - data handling (`pandas`, `numpy`)
@@ -2285,7 +2287,7 @@ print(f"Rsquared : {round(result_x.rsquared,3)}")
     Rsquared : 0.792
 
 
-## 🔍 Step X: Residual Analysis and Model Diagnostics
+## Residual Analysis and Model Diagnostics
 
 > After finalizing our simplified regression model, we perform residual analysis to verify key assumptions and assess model quality.
 residuals = y_train - predicted_y
@@ -2517,9 +2519,11 @@ print("The lower bound in normal prices  ", np.e** lower_bound * 1000)
     The lower bound in log prices for 95% prediction interval is  3.027795529515113
     The lower bound in normal prices   20651.656405160997
 
+---
 
+That wraps up the main parts of this project for now. I’ve focused on a few steps that I found especially useful while exploring regression — from preprocessing and multicollinearity checks to evaluating model fit with BIC and inspecting residuals.
 
-```python
+In the next part, we’ll continue by actually using the model to make predictions — including calculating upper and lower bounds to estimate a range of possible prices.
 
+Thanks for reading, and see you in the next post! 
 
-```
