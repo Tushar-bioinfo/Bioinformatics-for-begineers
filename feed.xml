@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-06-29T22:40:20+00:00</updated><id>/feed.xml</id><title type="html">Bioinformatics for Beginners</title><subtitle>A blog by Tushar to simplify bioinformatics and machine learning</subtitle><author><name>Tushar Singh</name></author><entry><title type="html">Boston House Regression_preprocessing</title><link href="/2024/07/01/boston-house-regression_preprocessing.html" rel="alternate" type="text/html" title="Boston House Regression_preprocessing" /><published>2024-07-01T00:00:00+00:00</published><updated>2024-07-01T00:00:00+00:00</updated><id>/2024/07/01/boston-house-regression_preprocessing</id><content type="html" xml:base="/2024/07/01/boston-house-regression_preprocessing.html"><![CDATA[<h2 id="import-libraries">Import Libraries</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-06-29T22:47:16+00:00</updated><id>/feed.xml</id><title type="html">Bioinformatics for Beginners</title><subtitle>A blog by Tushar to simplify bioinformatics and machine learning</subtitle><author><name>Tushar Singh</name></author><entry><title type="html">Hands-On with Linear Regression: Boston Housing Edition</title><link href="/2024/07/01/boston-house-regression_preprocessing.html" rel="alternate" type="text/html" title="Hands-On with Linear Regression: Boston Housing Edition" /><published>2024-07-01T00:00:00+00:00</published><updated>2024-07-01T00:00:00+00:00</updated><id>/2024/07/01/boston-house-regression_preprocessing</id><content type="html" xml:base="/2024/07/01/boston-house-regression_preprocessing.html"><![CDATA[<blockquote>
+  <p><strong>Note:</strong> This project was part of my learning journey, not a tutorial.</p>
+</blockquote>
+
+<p>The Boston Housing dataset is one of the classic beginner projects in machine learning. I worked on this as part of my learning journey and wanted to share a few key steps that I personally found interesting or worth paying attention to.</p>
+
+<p>This isn’t meant to be a full tutorial — instead, I’ll walk through the main parts of the process that stood out to me: how we test relationships between features, apply log transformations, evaluate model fit using BIC, and use RMSE to build a prediction range.</p>
+
+<p>The idea is to keep things simple and practical. If you’re also exploring ML and want to build intuition for how regression works in real datasets, I hope this post helps you spot the “why” behind some of the steps — not just the code itself.## Import Libraries</p>
 
 <blockquote>
   <p>We begin by importing essential libraries for:</p>
@@ -2295,4 +2303,4 @@ The lower bound in normal prices   20651.656405160997
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 
-</code></pre></div></div>]]></content><author><name>Tushar Singh</name></author><summary type="html"><![CDATA[Import Libraries]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>Tushar Singh</name></author><summary type="html"><![CDATA[Note: This project was part of my learning journey, not a tutorial.]]></summary></entry></feed>
