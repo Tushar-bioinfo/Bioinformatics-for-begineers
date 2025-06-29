@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-06-29T23:04:10+00:00</updated><id>/feed.xml</id><title type="html">Bioinformatics for Beginners</title><subtitle>A blog by Tushar to simplify bioinformatics and machine learning</subtitle><author><name>Tushar Singh</name></author><entry><title type="html">Hands-On with Linear Regression: Boston Housing Edition</title><link href="/2024/07/01/boston-house-regression_preprocessing.html" rel="alternate" type="text/html" title="Hands-On with Linear Regression: Boston Housing Edition" /><published>2024-07-01T00:00:00+00:00</published><updated>2024-07-01T00:00:00+00:00</updated><id>/2024/07/01/boston-house-regression_preprocessing</id><content type="html" xml:base="/2024/07/01/boston-house-regression_preprocessing.html"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-06-29T23:07:50+00:00</updated><id>/feed.xml</id><title type="html">Bioinformatics for Beginners</title><subtitle>A blog by Tushar to simplify bioinformatics and machine learning</subtitle><author><name>Tushar Singh</name></author><entry><title type="html">Hands-On with Linear Regression: Boston Housing Edition</title><link href="/2024/07/01/boston-house-regression_preprocessing.html" rel="alternate" type="text/html" title="Hands-On with Linear Regression: Boston Housing Edition" /><published>2024-07-01T00:00:00+00:00</published><updated>2024-07-01T00:00:00+00:00</updated><id>/2024/07/01/boston-house-regression_preprocessing</id><content type="html" xml:base="/2024/07/01/boston-house-regression_preprocessing.html"><![CDATA[<blockquote>
   <p><strong>Note:</strong> This project was part of my learning journey, not a tutorial.</p>
 </blockquote>
 
@@ -344,7 +344,7 @@ memory usage: 55.5 KB
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Text(0, 0.5, 'Num of houses')
 </code></pre></div></div>
 
-<p><img src="/Bioinformatics-for-beginners/main_files/main_13_1.png" alt="png" /></p>
+<p><img src="/Bioinformatics-for-beginners/Bioinformatics-for-beginners/main_files/main_13_1.png" alt="png" /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sb</span><span class="p">.</span><span class="nf">displot</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">PRICE</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span><span class="n">kde</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="c1"># sb.displot(data.PRICE)
@@ -353,7 +353,7 @@ memory usage: 55.5 KB
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;seaborn.axisgrid.FacetGrid at 0x17dbd38d0&gt;
 </code></pre></div></div>
 
-<p><img src="/main_files/main_14_1.png" alt="png" /></p>
+<p><img src="/Bioinformatics-for-beginners/main_files/main_14_1.png" alt="png" /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span><span class="p">.</span><span class="nf">describe</span><span class="p">()</span>
 </code></pre></div></div>
@@ -528,7 +528,7 @@ memory usage: 55.5 KB
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Text(0, 0.5, 'Num of houses')
 </code></pre></div></div>
 
-<p><img src="/main_files/main_16_1.png" alt="png" /></p>
+<p><img src="/Bioinformatics-for-beginners/main_files/main_16_1.png" alt="png" /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="p">.</span><span class="nc">Figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
 <span class="n">plt</span><span class="p">.</span><span class="nf">hist</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="sh">"</span><span class="s">LSTAT</span><span class="sh">"</span><span class="p">],</span><span class="n">bins</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="sh">"</span><span class="s">red</span><span class="sh">"</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="sh">"</span><span class="s">black</span><span class="sh">"</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span> <span class="p">,</span> <span class="n">rwidth</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
@@ -539,7 +539,7 @@ memory usage: 55.5 KB
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Text(0, 0.5, 'Num of houses')
 </code></pre></div></div>
 
-<p><img src="/main_files/main_17_1.png" alt="png" /></p>
+<p><img src="/Bioinformatics-for-beginners/main_files/main_17_1.png" alt="png" /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span><span class="p">.</span><span class="n">RAD</span><span class="p">.</span><span class="nf">value_counts</span><span class="p">()</span>
 </code></pre></div></div>
@@ -567,7 +567,7 @@ Name: count, dtype: int64
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Text(0, 0.5, 'Num of houses')
 </code></pre></div></div>
 
-<p><img src="/main_files/main_19_1.png" alt="png" /></p>
+<p><img src="/Bioinformatics-for-beginners/main_files/main_19_1.png" alt="png" /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">###flexible way of making these without hardcoding 
 </span>
@@ -588,7 +588,7 @@ Name: count, dtype: int64
 Text(0, 0.5, 'Num of houses')
 </code></pre></div></div>
 
-<p><img src="/main_files/main_20_2.png" alt="png" /></p>
+<p><img src="/Bioinformatics-for-beginners/main_files/main_20_2.png" alt="png" /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span><span class="p">.</span><span class="n">CHAS</span><span class="p">.</span><span class="nf">value_counts</span><span class="p">()</span>
 </code></pre></div></div>
@@ -666,8 +666,8 @@ Corr with LSTAT:   -0.7376627261740151
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span><span class="p">.</span><span class="nf">corr</span><span class="p">()</span>
 </code></pre></div></div>
-<p>&lt;/div&gt;
-&lt;/style&gt;</p>
+<p>&lt;/div&gt;</p>
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1003,7 +1003,7 @@ Since correlation matrices are symmetrical, we mask one triangle to <strong>avoi
   Text(0, 13.5, 'PRICE')])
 </code></pre></div></div>
 
-<p><img src="/main_files/main_27_1.png" alt="png" /></p>
+<p><img src="/Bioinformatics-for-beginners/main_files/main_27_1.png" alt="png" /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="p">.</span><span class="nf">scatter</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">NOX</span><span class="p">,</span><span class="n">data</span><span class="p">.</span><span class="n">DIS</span><span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="sh">"</span><span class="s">magenta</span><span class="sh">"</span> <span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
 <span class="n">plt</span><span class="p">.</span><span class="nf">xlabel</span><span class="p">(</span><span class="sh">"</span><span class="s">NOX</span><span class="sh">"</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
@@ -1019,7 +1019,7 @@ Since correlation matrices are symmetrical, we mask one triangle to <strong>avoi
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Text(0.5, 1.0, 'Distance vs NOX    (Corr -0.769)')
 </code></pre></div></div>
 
-<p><img src="/main_files/main_28_1.png" alt="png" /></p>
+<p><img src="/Bioinformatics-for-beginners/main_files/main_28_1.png" alt="png" /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
 <span class="n">sb</span><span class="p">.</span><span class="nf">jointplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">NOX</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span><span class="n">data</span><span class="p">.</span><span class="n">DIS</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="sh">"</span><span class="s">indigo</span><span class="sh">"</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span>  <span class="sh">"</span><span class="s">hist</span><span class="sh">"</span><span class="p">)</span>
@@ -1031,7 +1031,7 @@ Since correlation matrices are symmetrical, we mask one triangle to <strong>avoi
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Figure size 1120x640 with 0 Axes&gt;
 </code></pre></div></div>
 
-<p><img src="/main_files/main_29_1.png" alt="png" /></p>
+<p><img src="/Bioinformatics-for-beginners/main_files/main_29_1.png" alt="png" /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="p">.</span><span class="nf">scatter</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">RAD</span><span class="p">,</span><span class="n">data</span><span class="p">.</span><span class="n">TAX</span> <span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="sh">"</span><span class="s">orange</span><span class="sh">"</span> <span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
 <span class="n">plt</span><span class="p">.</span><span class="nf">ylabel</span><span class="p">(</span><span class="sh">"</span><span class="s">TAX</span><span class="sh">"</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
@@ -1046,7 +1046,7 @@ Since correlation matrices are symmetrical, we mask one triangle to <strong>avoi
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Text(0.5, 1.0, 'RAD vs TAX   (Corr 0.91)')
 </code></pre></div></div>
 
-<p><img src="/main_files/main_30_1.png" alt="png" /></p>
+<p><img src="/Bioinformatics-for-beginners/main_files/main_30_1.png" alt="png" /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
 <span class="n">sb</span><span class="p">.</span><span class="nf">jointplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">RAD</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span><span class="n">data</span><span class="p">.</span><span class="n">TAX</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="sh">"</span><span class="s">indigo</span><span class="sh">"</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span>  <span class="sh">"</span><span class="s">reg</span><span class="sh">"</span><span class="p">)</span>
@@ -1056,13 +1056,13 @@ Since correlation matrices are symmetrical, we mask one triangle to <strong>avoi
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Figure size 1120x640 with 0 Axes&gt;
 </code></pre></div></div>
 
-<p><img src="/main_files/main_31_1.png" alt="png" /></p>
+<p><img src="/Bioinformatics-for-beginners/main_files/main_31_1.png" alt="png" /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sb</span><span class="p">.</span><span class="nf">lmplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="sh">'</span><span class="s">RAD</span><span class="sh">'</span> <span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="sh">'</span><span class="s">TAX</span><span class="sh">'</span> <span class="p">,</span><span class="n">data</span><span class="o">=</span> <span class="n">data</span> <span class="p">)</span>
 <span class="n">plt</span><span class="p">.</span><span class="nf">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p><img src="/main_files/main_32_0.png" alt="png" /></p>
+<p><img src="/Bioinformatics-for-beginners/main_files/main_32_0.png" alt="png" /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="n">corr</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">PRICE</span><span class="p">.</span><span class="nf">corr</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">RM</span><span class="p">).</span><span class="nf">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -1070,7 +1070,7 @@ Since correlation matrices are symmetrical, we mask one triangle to <strong>avoi
 <span class="n">sb</span><span class="p">.</span><span class="nf">set_style</span><span class="p">(</span><span class="sh">"</span><span class="s">darkgrid</span><span class="sh">"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p><img src="/main_files/main_33_0.png" alt="png" /></p>
+<p><img src="/Bioinformatics-for-beginners/main_files/main_33_0.png" alt="png" /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sb</span><span class="p">.</span><span class="nf">pairplot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">kind</span> <span class="o">=</span> <span class="sh">"</span><span class="s">reg</span><span class="sh">"</span><span class="p">,</span> <span class="n">plot_kws</span><span class="o">=</span> <span class="p">{</span><span class="sh">'</span><span class="s">line_kws</span><span class="sh">'</span><span class="p">:{</span><span class="sh">'</span><span class="s">color</span><span class="sh">'</span><span class="p">:</span><span class="sh">'</span><span class="s">cyan</span><span class="sh">'</span><span class="p">},</span> <span class="sh">'</span><span class="s">scatter_kws</span><span class="sh">'</span><span class="p">:{</span><span class="sh">'</span><span class="s">color</span><span class="sh">'</span><span class="p">:</span><span class="sh">'</span><span class="s">green</span><span class="sh">'</span><span class="p">}})</span>
 </code></pre></div></div>
@@ -1078,7 +1078,7 @@ Since correlation matrices are symmetrical, we mask one triangle to <strong>avoi
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;seaborn.axisgrid.PairGrid at 0x17ef21ed0&gt;
 </code></pre></div></div>
 
-<p><img src="/main_files/main_36_1.png" alt="png" /></p>
+<p><img src="/Bioinformatics-for-beginners/main_files/main_36_1.png" alt="png" /></p>
 
 <h2 id="separate-features-and-target-variable">Separate Features and Target Variable</h2>
 
@@ -1351,7 +1351,7 @@ R2 for trained data: 0.750121534530608
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Text(0.5, 1.0, 'Prices with log')
 </code></pre></div></div>
 
-<p><img src="/main_files/main_51_1.png" alt="png" /></p>
+<p><img src="/Bioinformatics-for-beginners/main_files/main_51_1.png" alt="png" /></p>
 
 <h2 id="train-regression-model-on-log-transformed-prices">Train Regression Model on Log-Transformed Prices</h2>
 
@@ -2195,7 +2195,7 @@ Length: 404, dtype: float64
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(1.5, 4.1)
 </code></pre></div></div>
 
-<p><img src="/main_files/main_84_1.png" alt="png" /></p>
+<p><img src="/Bioinformatics-for-beginners/main_files/main_84_1.png" alt="png" /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
@@ -2211,7 +2211,7 @@ Length: 404, dtype: float64
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(2.0, 52.0)
 </code></pre></div></div>
 
-<p><img src="/main_files/main_85_1.png" alt="png" /></p>
+<p><img src="/Bioinformatics-for-beginners/main_files/main_85_1.png" alt="png" /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
@@ -2223,7 +2223,7 @@ Length: 404, dtype: float64
 <span class="n">plt</span><span class="p">.</span><span class="nf">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p><img src="/main_files/main_86_0.png" alt="png" /></p>
+<p><img src="/Bioinformatics-for-beginners/main_files/main_86_0.png" alt="png" /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
@@ -2234,7 +2234,7 @@ Length: 404, dtype: float64
 <span class="n">plt</span><span class="p">.</span><span class="nf">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p><img src="/main_files/main_87_0.png" alt="png" /></p>
+<p><img src="/Bioinformatics-for-beginners/main_files/main_87_0.png" alt="png" /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">residual_mean</span> <span class="o">=</span> <span class="nf">round</span><span class="p">(</span><span class="n">result_x</span><span class="p">.</span><span class="n">resid</span><span class="p">.</span><span class="nf">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">residual_skew</span> <span class="o">=</span> <span class="nf">round</span><span class="p">(</span><span class="n">result_x</span><span class="p">.</span><span class="n">resid</span><span class="p">.</span><span class="nf">skew</span><span class="p">(),</span><span class="mi">2</span><span class="p">)</span>
@@ -2258,7 +2258,7 @@ Length: 404, dtype: float64
 &lt;Figure size 1120x640 with 0 Axes&gt;
 </code></pre></div></div>
 
-<p><img src="/main_files/main_89_2.png" alt="png" /></p>
+<p><img src="/Bioinformatics-for-beginners/main_files/main_89_2.png" alt="png" /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result_x</span><span class="p">.</span><span class="n">mse_resid</span>
 </code></pre></div></div>
