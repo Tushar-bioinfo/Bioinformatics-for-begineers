@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-06-29T23:27:30+00:00</updated><id>/feed.xml</id><title type="html">Bioinformatics for Beginners</title><subtitle>A blog by Tushar to simplify bioinformatics and machine learning</subtitle><author><name>Tushar Singh</name></author><entry><title type="html">Hands-On with Linear Regression: Boston Housing Edition</title><link href="/2024/07/01/boston-house-regression_preprocessing.html" rel="alternate" type="text/html" title="Hands-On with Linear Regression: Boston Housing Edition" /><published>2024-07-01T00:00:00+00:00</published><updated>2024-07-01T00:00:00+00:00</updated><id>/2024/07/01/boston-house-regression_preprocessing</id><content type="html" xml:base="/2024/07/01/boston-house-regression_preprocessing.html"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-06-29T23:29:42+00:00</updated><id>/feed.xml</id><title type="html">Bioinformatics for Beginners</title><subtitle>A blog by Tushar to simplify bioinformatics and machine learning</subtitle><author><name>Tushar Singh</name></author><entry><title type="html">Hands-On with Linear Regression: Boston Housing Edition</title><link href="/2024/07/01/boston-house-regression_preprocessing.html" rel="alternate" type="text/html" title="Hands-On with Linear Regression: Boston Housing Edition" /><published>2024-07-01T00:00:00+00:00</published><updated>2024-07-01T00:00:00+00:00</updated><id>/2024/07/01/boston-house-regression_preprocessing</id><content type="html" xml:base="/2024/07/01/boston-house-regression_preprocessing.html"><![CDATA[<blockquote>
   <p><strong>Note:</strong> This project was part of my learning journey, not a tutorial.</p>
 </blockquote>
 
@@ -1122,12 +1122,13 @@ Since correlation matrices are symmetrical, we mask one triangle to <strong>avoi
 
 <ul>
   <li>$\theta_0$ is the <strong>intercept</strong> — the baseline prediction when all features are zero</li>
-  <li>$\theta_1, \theta_2, \dots, \theta_n$ are the <strong>coefficients</strong> for each feature</li>
+  <li>$\theta_1, \theta_2, \dots, \theta_n$ are the <strong>coefficients</strong> learned by the model</li>
   <li><code class="language-plaintext highlighter-rouge">RM</code>, <code class="language-plaintext highlighter-rouge">NOX</code>, …, <code class="language-plaintext highlighter-rouge">N</code> are the actual feature values from the dataset</li>
+  <li>The coefficient $\theta_1$ controls the weight of the <code class="language-plaintext highlighter-rouge">RM</code> feature</li>
 </ul>
 
 <blockquote>
-  <p>These $\theta$ values (coefficients) are what the model “learns” during training. The intercept stays fixed for a given model, but the individual feature weights change depending on which features we include or exclude.</p>
+  <p>These $\theta$ values (coefficients) are what the model “learns” during training. The intercept stays fixed for a given model, but the individual feature weights can change depending on which features we include or exclude.</p>
 </blockquote>
 
 <p>This is the underlying formula estimated when we use <code class="language-plaintext highlighter-rouge">LinearRegression().fit()</code> or <code class="language-plaintext highlighter-rouge">statsmodels.OLS()</code>.</p>

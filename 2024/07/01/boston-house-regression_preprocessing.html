@@ -1153,12 +1153,13 @@ Since correlation matrices are symmetrical, we mask one triangle to <strong>avoi
 
 <ul>
   <li>$\theta_0$ is the <strong>intercept</strong> — the baseline prediction when all features are zero</li>
-  <li>$\theta_1, \theta_2, \dots, \theta_n$ are the <strong>coefficients</strong> for each feature</li>
+  <li>$\theta_1, \theta_2, \dots, \theta_n$ are the <strong>coefficients</strong> learned by the model</li>
   <li><code class="language-plaintext highlighter-rouge">RM</code>, <code class="language-plaintext highlighter-rouge">NOX</code>, …, <code class="language-plaintext highlighter-rouge">N</code> are the actual feature values from the dataset</li>
+  <li>The coefficient $\theta_1$ controls the weight of the <code class="language-plaintext highlighter-rouge">RM</code> feature</li>
 </ul>
 
 <blockquote>
-  <p>These $\theta$ values (coefficients) are what the model “learns” during training. The intercept stays fixed for a given model, but the individual feature weights change depending on which features we include or exclude.</p>
+  <p>These $\theta$ values (coefficients) are what the model “learns” during training. The intercept stays fixed for a given model, but the individual feature weights can change depending on which features we include or exclude.</p>
 </blockquote>
 
 <p>This is the underlying formula estimated when we use <code class="language-plaintext highlighter-rouge">LinearRegression().fit()</code> or <code class="language-plaintext highlighter-rouge">statsmodels.OLS()</code>.</p>
