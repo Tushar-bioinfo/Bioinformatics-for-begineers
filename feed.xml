@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-06-29T23:35:24+00:00</updated><id>/feed.xml</id><title type="html">Bioinformatics for Beginners</title><subtitle>A blog by Tushar to simplify bioinformatics and machine learning</subtitle><author><name>Tushar Singh</name></author><entry><title type="html">Hands-On with Linear Regression: Boston Housing Edition</title><link href="/2024/07/01/boston-house-regression_preprocessing.html" rel="alternate" type="text/html" title="Hands-On with Linear Regression: Boston Housing Edition" /><published>2024-07-01T00:00:00+00:00</published><updated>2024-07-01T00:00:00+00:00</updated><id>/2024/07/01/boston-house-regression_preprocessing</id><content type="html" xml:base="/2024/07/01/boston-house-regression_preprocessing.html"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-06-29T23:38:21+00:00</updated><id>/feed.xml</id><title type="html">Bioinformatics for Beginners</title><subtitle>A blog by Tushar to simplify bioinformatics and machine learning</subtitle><author><name>Tushar Singh</name></author><entry><title type="html">Hands-On with Linear Regression: Boston Housing Edition</title><link href="/2024/07/01/boston-house-regression_preprocessing.html" rel="alternate" type="text/html" title="Hands-On with Linear Regression: Boston Housing Edition" /><published>2024-07-01T00:00:00+00:00</published><updated>2024-07-01T00:00:00+00:00</updated><id>/2024/07/01/boston-house-regression_preprocessing</id><content type="html" xml:base="/2024/07/01/boston-house-regression_preprocessing.html"><![CDATA[<blockquote>
   <p><strong>Note:</strong> This project was part of my learning journey, not a tutorial.</p>
 </blockquote>
 
@@ -1108,7 +1108,7 @@ Since correlation matrices are symmetrical, we mask one triangle to <strong>avoi
 </span>
 </code></pre></div></div>
 
-<h2 id="-multivariable-linear-regression-overview">📈 Multivariable Linear Regression Overview</h2>
+<h2 id="multivariable-linear-regression-overview">Multivariable Linear Regression Overview</h2>
 
 <blockquote>
   <p>In multivariable linear regression, we try to predict the target variable (<code class="language-plaintext highlighter-rouge">PRICE</code>) as a weighted sum of all input features, plus an intercept.</p>
@@ -1134,7 +1134,7 @@ Since correlation matrices are symmetrical, we mask one triangle to <strong>avoi
 
 <hr />
 
-<h2 id="-splitting-the-data-train-vs-test-sets">🧪 Splitting the Data: Train vs Test Sets</h2>
+<h2 id="splitting-the-data-train-vs-test-sets">Splitting the Data: Train vs Test Sets</h2>
 
 <blockquote>
   <p>To evaluate model performance fairly, we split our dataset into:</p>
@@ -1572,28 +1572,31 @@ R2 value of Test set : 0.7446922306260739
 <h2 id="testing-for-multicollinearity-with-vif">Testing for Multicollinearity with VIF</h2>
 
 <blockquote>
-  <p>Multicollinearity occurs when features are highly correlated with each other, which can make the regression model unstable or misleading.</p>
+  <p>Multicollinearity happens when two or more input features are strongly correlated with each other. This can make the model’s coefficient estimates unreliable or overly sensitive to small changes in the data.</p>
 </blockquote>
 
-<p>We test for this using <strong>VIF (Variance Inflation Factor)</strong>:</p>
+<p>We test for this using <strong>VIF</strong> (Variance Inflation Factor), which measures how much the variance of a regression coefficient is inflated due to multicollinearity.</p>
+
+<p>The formula for VIF is:</p>
+
+\[\text{VIF}_i = \frac{1}{1 - R^2_i}\]
+
+<p>Where:</p>
 <ul>
-  <li>VIF measures how much a feature is “inflated” due to correlation with other features.</li>
-  <li>Formula:<br />
-\(\text{VIF}_i = \frac{1}{1 - R^2_i}\)<br />
-where ( R^2_i ) is the R² value from regressing the <em>i-th</em> feature on all others.</li>
+  <li>$R^2_i$ is the coefficient of determination when the <em>i-th</em> feature is regressed against all the other features.</li>
+</ul>
+
+<h3 id="-how-to-interpret-vif">🔍 How to interpret VIF:</h3>
+<ul>
+  <li><strong>VIF ≈ 1</strong> → No multicollinearity</li>
+  <li><strong>VIF = 1–5</strong> → Generally acceptable</li>
+  <li><strong>VIF = 5–10</strong> → Moderate correlation, may need checking</li>
+  <li><strong>VIF &gt; 10</strong> → Strong multicollinearity — consider removing the feature</li>
 </ul>
 
 <blockquote>
-  <p><strong>Interpretation:</strong></p>
-  <ul>
-    <li>VIF = 1 → no multicollinearity</li>
-    <li>VIF = 1–5 → okay</li>
-    <li>VIF = 5–10 → moderate, keep an eye</li>
-    <li>VIF &gt; 10 → <strong>serious multicollinearity</strong>, consider dropping that feature</li>
-  </ul>
+  <p>By calculating VIF scores for all features, we can identify which ones may be redundant and remove them to improve both the stability and interpretability of the model.</p>
 </blockquote>
-
-<p>By calculating VIF for all features, we can identify which ones are redundant and safely remove them to improve model reliability and interpretability.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># VIF = vif(exog = x_incl_const.values ,exog_idx=13 )
 # VIF
