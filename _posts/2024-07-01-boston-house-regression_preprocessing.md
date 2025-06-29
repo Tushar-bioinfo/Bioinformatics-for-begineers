@@ -356,7 +356,7 @@ plt.ylabel("Num of houses",fontsize = 12)
 
 
     
-![png](/Bioinformatics-for-beginners/main_files/main_13_1.png)
+![png](/Bioinformatics-for-beginners/Bioinformatics-for-beginners/main_files/main_13_1.png)
     
 
 
@@ -375,7 +375,7 @@ sb.displot(data.PRICE,bins=30,kde=True)
 
 
     
-![png](/main_files/main_14_1.png)
+![png](/Bioinformatics-for-beginners/main_files/main_14_1.png)
     
 
 
@@ -564,7 +564,7 @@ plt.ylabel("Num of houses",fontsize = 12)
 
 
     
-![png](/main_files/main_16_1.png)
+![png](/Bioinformatics-for-beginners/main_files/main_16_1.png)
     
 
 
@@ -585,7 +585,7 @@ plt.ylabel("Num of houses",fontsize = 12)
 
 
     
-![png](/main_files/main_17_1.png)
+![png](/Bioinformatics-for-beginners/main_files/main_17_1.png)
     
 
 
@@ -629,7 +629,7 @@ plt.ylabel("Num of houses",fontsize = 12)
 
 
     
-![png](/main_files/main_19_1.png)
+![png](/Bioinformatics-for-beginners/main_files/main_19_1.png)
     
 
 
@@ -657,7 +657,7 @@ plt.ylabel("Num of houses",fontsize = 12)
 
 
     
-![png](/main_files/main_20_2.png)
+![png](/Bioinformatics-for-beginners/main_files/main_20_2.png)
     
 
 
@@ -740,7 +740,7 @@ for cols in data.columns:
 data.corr()
 ```
 </div>
-</style>
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1083,7 +1083,7 @@ plt.yticks(fontsize=10)
 
 
     
-![png](/main_files/main_27_1.png)
+![png](/Bioinformatics-for-beginners/main_files/main_27_1.png)
     
 
 
@@ -1109,7 +1109,7 @@ plt.title(f"Distance vs NOX    (Corr {corr})")
 
 
     
-![png](/main_files/main_28_1.png)
+![png](/Bioinformatics-for-beginners/main_files/main_28_1.png)
     
 
 
@@ -1128,7 +1128,7 @@ sb.set()
 
 
     
-![png](/main_files/main_29_1.png)
+![png](/Bioinformatics-for-beginners/main_files/main_29_1.png)
     
 
 
@@ -1153,7 +1153,7 @@ plt.title(f"RAD vs TAX   (Corr {corr})")
 
 
     
-![png](/main_files/main_30_1.png)
+![png](/Bioinformatics-for-beginners/main_files/main_30_1.png)
     
 
 
@@ -1170,7 +1170,7 @@ sb.set_style("darkgrid")
 
 
     
-![png](/main_files/main_31_1.png)
+![png](/Bioinformatics-for-beginners/main_files/main_31_1.png)
     
 
 
@@ -1182,7 +1182,7 @@ plt.grid(True)
 
 
     
-![png](/main_files/main_32_0.png)
+![png](/Bioinformatics-for-beginners/main_files/main_32_0.png)
     
 
 
@@ -1196,7 +1196,7 @@ sb.set_style("darkgrid")
 
 
     
-![png](/main_files/main_33_0.png)
+![png](/Bioinformatics-for-beginners/main_files/main_33_0.png)
     
 
 
@@ -1214,7 +1214,7 @@ sb.pairplot(data, kind = "reg", plot_kws= {'line_kws':{'color':'cyan'}, 'scatter
 
 
     
-![png](/main_files/main_36_1.png)
+![png](/Bioinformatics-for-beginners/main_files/main_36_1.png)
     
 ## Separate Features and Target Variable
 
@@ -1480,7 +1480,7 @@ plt.title("Prices with log")
 
 
     
-![png](/main_files/main_51_1.png)
+![png](/Bioinformatics-for-beginners/main_files/main_51_1.png)
     
 
 
@@ -2375,7 +2375,7 @@ plt.xlim(1.5,4.1)
 
 
     
-![png](/main_files/main_84_1.png)
+![png](/Bioinformatics-for-beginners/main_files/main_84_1.png)
     
 
 
@@ -2401,7 +2401,7 @@ plt.xlim(2,52)
 
 
     
-![png](/main_files/main_85_1.png)
+![png](/Bioinformatics-for-beginners/main_files/main_85_1.png)
     
 
 
@@ -2419,7 +2419,7 @@ plt.grid(True)
 
 
     
-![png](/main_files/main_86_0.png)
+![png](/Bioinformatics-for-beginners/main_files/main_86_0.png)
     
 
 
@@ -2436,7 +2436,7 @@ plt.grid(True)
 
 
     
-![png](/main_files/main_87_0.png)
+![png](/Bioinformatics-for-beginners/main_files/main_87_0.png)
     
 
 
@@ -2475,7 +2475,7 @@ plt.xlabel("Residual")
 
 
     
-![png](/main_files/main_89_2.png)
+![png](/Bioinformatics-for-beginners/main_files/main_89_2.png)
     
 
 
