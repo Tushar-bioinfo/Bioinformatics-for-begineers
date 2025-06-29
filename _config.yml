@@ -1,0 +1,14 @@
+title: Bioinformatics for Beginners
+description: A blog by Tushar to simplify bioinformatics and machine learning
+
+theme: minima  # ✅ Enables the actual blog style
+
+minima:
+  skin: dark  # 🌙 Enables dark mode
+  social_links:
+    - { platform: github, user_url: "https://github.com/tushar-bioinfo" }
+  show_excerpts: true
+  date_format: "%b %-d, %Y"
+
+author: Tushar Singh
+email: tushar14032001@gmail.com
